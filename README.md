@@ -54,17 +54,17 @@ Create the topic:
 -----------------------------
 Duplicate the session & enter in a new console --
 cd kafka_2.12-3.3.1
-bin/kafka-topics.sh --create --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092} --replication-factor 1 --partitions 1
-bin/kafka-topics.sh --create --topic demo_testing2 --bootstrap-server 3.84.155.54:9092 --replication-factor 1 --partitions 1
+bin/kafka-topics.sh --create --topic demo_test --bootstrap-server {Put the Public IP of your EC2 Instance:9092} --replication-factor 1 --partitions 1
+bin/kafka-topics.sh --create --topic demo_test --bootstrap-server 54.235.0.205:9092 --replication-factor 1 --partitions 1
 
 Start Producer:
 --------------------------
 bin/kafka-console-producer.sh --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092} 
-bin/kafka-console-producer.sh --topic demo_testing2 --bootstrap-server 3.84.155.54:9092 
+bin/kafka-console-producer.sh --topic demo_testing2 --bootstrap-server 54.235.0.205:9092 
 
 Start Consumer:
 -------------------------
 Duplicate the session & enter in a new console --
 cd kafka_2.12-3.3.1
 bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server {Put the Public IP of your EC2 Instance:9092}
-bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server 3.84.155.54:9092
+bin/kafka-console-consumer.sh --topic demo_testing2 --bootstrap-server 54.235.0.205:9092
